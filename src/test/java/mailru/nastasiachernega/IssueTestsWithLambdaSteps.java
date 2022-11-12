@@ -31,7 +31,7 @@ public class IssueTestsWithLambdaSteps {
     @Owner("Anastasia Chernega")
     @Severity(SeverityLevel.BLOCKER)
     @Link(value = "Link on GitHub (testing resource)", url = "https://github.com/")
-    @DisplayName("Check the existence in repository of issue")
+    @DisplayName("Check the existence in repository of issue ")
     @ParameterizedTest
     void checkIssueTitleWithLambdaSteps(String searchingIssueTitle) {
 

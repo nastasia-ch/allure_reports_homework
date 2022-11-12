@@ -13,7 +13,6 @@ public class IssueTestsWithStepAnnotation {
     private static final String firstSearchingIssueTitle = "Set of URLs may behave surprisingly on hashCode/equals";
     private static final String secondSearchingIssueTitle = "User guidehasseveral accessibility issues";
 
-
     @ValueSource(strings = {
             firstSearchingIssueTitle,
             secondSearchingIssueTitle,

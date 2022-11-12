@@ -1,8 +1,13 @@
 package mailru.nastasiachernega;
 
+import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.openqa.selenium.By.linkText;
@@ -39,6 +44,11 @@ public class WebSteps {
     public WebSteps shouldSeeIssueWithTitle(String searchingIssueTitle) {
         $("#repo-content-turbo-frame").shouldHave(text(searchingIssueTitle));
         return this;
+    }
+
+    @Attachment(value = "Screenshot", type = "image/png")
+    public byte[] makeScreenshot() {
+        return ((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
 }
